@@ -1,0 +1,21 @@
+.header{background-color: #fdfafa;
+    color: #0aeebd;}
+
+    
+    .menu {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        display: flex;
+        flex-wrap: wrap;
+       }
+       
+
+       .menu__link{
+        display: block;
+        padding: 10px;
+        margin: 5px;
+        background-color: rgb(89, 240, 215);
+        color: rgb(10, 10, 10);
+        text-decoration: none;
+       }
