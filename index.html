@@ -10,10 +10,9 @@
 
 <body>
 <header class="header container">
-   <img class="header__logo" src="https://assets.turbologo.ru/blog/ru/2020/01/18163122/logo-school.png" alt="Лого" width="200" height="111">
+    <div class="header__logo-wrap">
+    <img class="header__logo" src="https://assets.turbologo.ru/blog/ru/2020/01/18163122/logo-school.png" alt="Лого" width="200" height="111">
     <h1 class="header__title">FastPass</h1>
-    <div class="header__wrap-right">
-    <a class="header__button" href="login.htmml">Личный кабинет</a>
     </div>
 
     <nav class="header__menu">
@@ -33,23 +32,29 @@
             <li class="menu__item">
                 <a class="menu__link" href="courses.html">Контакты</a>
             </li>
+            <li class="menu__item">
+                <a class="menu__link" href="courses.html">Вход</a>
+            </li>
         </ul>
     </nav>
 </header>
 <main class="main container">
-    <section class="main__wrap-left">
-        <h2 class="main__title">Онлайн курсы для подготовки к ЕГЭ</h2>
-        <p class="main__title"> C гарантией получения 75 баллов по предмету</p>
-        <P class="main__title">Пробное занятие бесплатно</P>
-        <button class="main__button">Записаться</button>
-    </section>
-    <img class="main__book" src="https://cdn.culture.ru/images/debf6992-adf3-5e7a-a20a-145501b2436d" alt="Книги" width="500" height="333">
-    <img class="main__students" src="https://img.freepik.com/free-photo/thinking-student-home_144627-26368.jpg?size=626&ext=jpg" alt="Студент" width="500" height="333">
+    <section class="welcome">
+        <div class="welcome__wrap-left">
+        <h2 class="welcome__title">Онлайн курсы для подготовки к ЕГЭ</h2>
+        <p class="welcome__title"> C гарантией получения 75 баллов по предмету</p>
+        <P class="welcome__title">Пробное занятие бесплатно</P>
+        <button class="interactive-button" type="button">Записаться</button>
+        </div>
+        <div class="welcome__wrap-right">
+        <img class="welcome__image" src="https://img.freepik.com/free-photo/thinking-student-home_144627-26368.jpg?size=626&ext=jpg" alt="Студент" width="550" height="333">
+        </div>
+    </section>    
 </main>
 <footer class="footer container">
     <div class="footer__wrap-left">
-        <button class="footer__button">Посмотри,как проходит подготовка учеников в нашем сервисе</button>
-        <video class="footer__video" width="320" height="240" controls>
+        <button class="interactive-button" type="button">Посмотри, как проходит подготовка учеников в нашем сервисе</button>
+        <video class="footer__video" width="1" height="1" controls>
             <source src="https://yandex.ru/video/preview/6705781527698299508">
         </video>
         <p class="footer__title">Сайт сделан Конаковым Маратом группа: CT-24</p>
@@ -61,6 +66,14 @@
         <input type="tel" name="phone" placeholder="Номер телефона" required> 
         <input type="password" name="password" placeholder="Пароль" required>
         <button class="button">Войти</button>
+    </form>
+</section>
+<section class="record">
+    <form action="//">
+        <h2 class="record">Запись на пробное занятие</h2>
+        <input type="tel" name="phone" placeholder="Номер телефона" required> 
+        <input type="email" id="email" name="email" placeholder="Почта" required>
+        <button class="button">Записаться</button>
     </form>
 </section>
 </body>
