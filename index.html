@@ -60,21 +60,34 @@
         <p class="footer__title">Сайт сделан Конаковым Маратом группа: CT-24</p>
     </div>
 </footer>
-<section class="section">
-    <form action="/">
-        <h2 class="section__title">Вход в личный кабинет</h2>
-        <input type="tel" name="phone" placeholder="Номер телефона" required> 
-        <input type="password" name="password" placeholder="Пароль" required>
-        <button class="button">Войти</button>
+<section class="login">
+    <form class="login-form">
+        <h2>Вход в личный кабинет</h2>
+        <div class="input-group">
+            <label for="phone">Номер телефона</label>
+            <input type="tel" id="phones" placeholder="Введите номер" required>
+        </div>
+        <div class="input-group">
+            <label for="password">Пароль</label>
+            <input type="password" id="password" placeholder="Введите пароль" required>
+        </div>
+        <button type="submit" class="login-button">Войти</button>
     </form>
 </section>
 <section class="record">
-    <form action="//">
-        <h2 class="record">Запись на пробное занятие</h2>
-        <input type="tel" name="phone" placeholder="Номер телефона" required> 
-        <input type="email" id="email" name="email" placeholder="Почта" required>
-        <button class="button">Записаться</button>
+    <form class="signup-form">
+        <h2>Запись на пробное занятие</h2>
+        <div class="input-group">
+            <label for="phone">Номер телефона</label>
+            <input type="tel" id="phone" placeholder="Введите номер телефона" required>
+        </div>
+        <div class="input-group">
+            <label for="email">Электронная почта</label>
+            <input type="email" id="email" placeholder="Введите email" required>
+        </div>
+        <button type="submit" class="signup-button">Записаться</button>
     </form>
 </section>
+<script src="scripts/script.js"></script>
 </body>
 </html>

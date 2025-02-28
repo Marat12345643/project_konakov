@@ -258,3 +258,36 @@ text-align: center;
   transform: translateY(-10px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
+.button-container {
+  display: flex;
+  gap: 20px;
+}
+
+.btn {
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.feedback-btn {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.feedback-btn:hover {
+  background-color: #45a049;
+  transform: translateY(-2px);
+}
+
+.contact-btn {
+  background-color: #2196F3;
+  color: white;
+}
+
+.contact-btn:hover {
+  background-color: #0b7dda;
+  transform: translateY(-2px);
+}
