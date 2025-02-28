@@ -10,10 +10,9 @@
 
 <body>
 <header class="header container">
-   <img class="header__logo" src="https://assets.turbologo.ru/blog/ru/2020/01/18163122/logo-school.png" alt="Лого" width="200" height="111">
-    <h2 class="header__title">FastPass</h2>
-    <div class="about__wrap-right">
-    <a class="header__button" href="login.html">Личный кабинет</a>
+    <div class="header__logo-wrap">
+    <img class="header__logo" src="https://assets.turbologo.ru/blog/ru/2020/01/18163122/logo-school.png" alt="Лого" width="200" height="111">
+    <h1 class="header__title">FastPass</h1>
     </div>
 
     <nav class="header__menu">
@@ -33,35 +32,62 @@
             <li class="menu__item">
                 <a class="menu__link" href="courses.html">Контакты</a>
             </li>
+            <li class="menu__item">
+                <a class="menu__link" href="courses.html">Вход</a>
+            </li>
         </ul>
     </nav>
 </header>
 <main class="main container">
-    <section class="about__wrap-left">
-        <h1 class="main__title">Онлайн курсы для подготовки к ЕГЭ</h1>
-        <p class="main__title"> C гарантией получения 75 баллов по предмету</p>
-        <P class="main__title">Пробное занятие бесплатно</P>
-        <button class="main__button">Записаться</button>
-    </section>
-    <img class="main__book" src="https://cdn.culture.ru/images/debf6992-adf3-5e7a-a20a-145501b2436d" alt="Книги" width="500" height="333">
-    <img class="main__students" src="https://img.freepik.com/free-photo/thinking-student-home_144627-26368.jpg?size=626&ext=jpg" alt="Студент" width="500" height="333">
+    <section class="welcome">
+        <div class="welcome__wrap-left">
+        <h2 class="welcome__title">Онлайн курсы для подготовки к ЕГЭ</h2>
+        <p class="welcome__title"> C гарантией получения 75 баллов по предмету</p>
+        <P class="welcome__title">Пробное занятие бесплатно</P>
+        <button class="interactive-button" type="button">Записаться</button>
+        </div>
+        <div class="welcome__wrap-right">
+        <img class="welcome__image" src="https://img.freepik.com/free-photo/thinking-student-home_144627-26368.jpg?size=626&ext=jpg" alt="Студент" width="550" height="333">
+        </div>
+    </section>    
 </main>
 <footer class="footer container">
-    <div class="about__wrap-left">
-        <button class="foooter__button">Посмотри,как проходит подготовка учеников в нашем сервисе</button>
-        <video class="foooter__video" width="320" height="240" controls>
+    <div class="footer__wrap-left">
+        <button class="interactive-button" type="button">Посмотри, как проходит подготовка учеников в нашем сервисе</button>
+        <video class="footer__video" width="1" height="1" controls>
             <source src="https://yandex.ru/video/preview/6705781527698299508">
         </video>
         <p class="footer__title">Сайт сделан Конаковым Маратом группа: CT-24</p>
     </div>
 </footer>
-<section class="section">
-    <form action="/">
-        <h1 class="section__title">Вход в личный кабинет</h1>
-        <input type="tel" name="phone" placeholder="Номер телефона" required> 
-        <input type="password" name="password" placeholder="Пароль" required>
-        <button class="button">Войти</button>
+<section class="login">
+    <form class="login-form">
+        <h2>Вход в личный кабинет</h2>
+        <div class="input-group">
+            <label for="phone">Номер телефона</label>
+            <input type="tel" id="phones" placeholder="Введите номер" required>
+        </div>
+        <div class="input-group">
+            <label for="password">Пароль</label>
+            <input type="password" id="password" placeholder="Введите пароль" required>
+        </div>
+        <button type="submit" class="login-button">Войти</button>
     </form>
 </section>
+<section class="record">
+    <form class="signup-form">
+        <h2>Запись на пробное занятие</h2>
+        <div class="input-group">
+            <label for="phone">Номер телефона</label>
+            <input type="tel" id="phone" placeholder="Введите номер телефона" required>
+        </div>
+        <div class="input-group">
+            <label for="email">Электронная почта</label>
+            <input type="email" id="email" placeholder="Введите email" required>
+        </div>
+        <button type="submit" class="signup-button">Записаться</button>
+    </form>
+</section>
+<script src="scripts/script.js"></script>
 </body>
 </html>

@@ -9,10 +9,10 @@
 </head>
 <body>
     <header class="header container">
+        <div class="header__logo-wrap">
         <img class="header__logo" src="https://assets.turbologo.ru/blog/ru/2020/01/18163122/logo-school.png" alt="Лого" width="200" height="111">
-         <h2 class="header__title">FastPass</h2>
-         <a class="header__button" href="login.html">Личный кабинет</a>
-         
+        <h1 class="header__title">FastPass</h1>
+        </div> 
          <nav class="header__menu">
              <ul class="menu">
                  <li class="menu__item menu__item--active">
@@ -34,33 +34,48 @@
          </nav>
      </header>
      <main class="main container">
+            <div class="teachers">
+                <h2 class="main__title">Наши курсы</h2>             
+            </div>
         <section class="section">
-            <div class="about__wrap-left">
-                <h2 class="main__title">Курсы для любого уровня</h2>
-                <a class="main__link" href="#" target="_blank">Bce Kypcы</a>
-                </div>
-            <ul class="menu">
-                <li class="about__wrap-left">
-                    <img class="menu__logo" src="https://static.vecteezy.com/system/resources/previews/037/336/411/original/russia-flag-national-emblem-graphic-element-illustration-free-vector.jpg" alt="Флаг России" width="50" height="50">
-                    <h3 class="menu__title"> Русский для высокого уровня</h3>
-                    <p class="menu__title">Длительность: 45 часов</p>
-                    <p class="menu__title">Модулей:3</p>
-                    <a class="menu__link" href="#">Узнать подробнее</a>
+            <ul class="courses">
+                <li class="courses__card">
+                    <img class="courses__logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRs3Nv1dUHgTVa6Ic6VI-NH3BTQixaZmoLItQ&s" alt="Флаг России" width="50" height="50">
+                    <h3 class="courses__name"> Русский для высокого уровня</h3>
+                    <p class="courses__desc"> Длительность: 40 часов</p>
+                    <p class="courses__title"> Модулей: 5</p>
+                    <a class="courses__link" href="#"> Приобрести</a>
                     <span>От 6520 ₽</span>
                 </li>
-                <li class=" about__wrap-right">
-                    <img class="menu__logo" src="https://avatars.mds.yandex.net/i?id=2e512523dada59047464fcfce8ff626e_l-5659069-images-thumbs&n=13" alt="Английский флаг" width="50" height="50">
-                    <h3 class="menu__title">Английский для высокого уровня</h3>
-                    <p class="menu__title">Длительность: 45 часов</p>
-                    <p class="menu__title">Модулей:3</p>
-                    <a class="menu__link" href="#">Узнать подробнее</a>
+                <li class="courses__card">
+                    <img class="courses__logo" src="https://avatars.mds.yandex.net/i?id=2e512523dada59047464fcfce8ff626e_l-5659069-images-thumbs&n=13" alt="Английский флаг" width="50" height="50">
+                    <h3 class="courses__name">Английский для высокого уровня</h3>
+                    <p class="courses__desc">Длительность: 45 часов</p>
+                    <p class="courses__title">Модулей: 3</p>
+                    <a class="courses__link" href="#">Узнать подробнее</a>
+                    <span>Oт 6 520 ₽</span>
+                </li>
+                <li class="courses__card">
+                    <img class="courses__logo" src="https://р16.навигатор.дети/images/events/cover/d94ec1e926084e76411cf7f86a3fd3dd_big.jpg" alt="История" width="50" height="50">
+                    <h3 class="courses__name">История для высокого уровня</h3>
+                    <p class="courses__desc">Длительность: 52 часа</p>
+                    <p class="courses__title">Модулей: 4</p>
+                    <a class="courses__link" href="#">Узнать подробнее</a>
+                    <span>Oт 6 520 ₽</span>
+                </li>
+                <li class="courses__card">
+                    <img class="courses__logo" src="https://gonba97.gosuslugi.ru/netcat_files/57/753/1_5254ff3fd1bfd5254ff3fd1c3b.png" alt="Математика" width="50" height="50">
+                    <h3 class="courses__name">Математика для высокого уровня</h3>
+                    <p class="courses__desc">Длительность: 50 часов</p>
+                    <p class="courses__title">Модулей: 7</p>
+                    <a class="courses__link" href="#">Узнать подробнее</a>
                     <span>Oт 6 520 ₽</span>
                 </li>
             </ul>
         </section>
         <section class="section">
             <div class="teachers">
-                <h3 class="teachers__title">Наши преподаватели</h3>
+                <h2 class="teachers__title">Наши преподаватели</h2>
             </div>
             <ul class="teachers">
                 <li class="teachers__card">
@@ -69,19 +84,31 @@
                     <p class="teachers__desc">Опыт работы: 3 года</p>
                 </li>
                 <li class="teachers__card">
-                    <img class="teachers__image" src="https://ienglish.ru/assets/uploads/images/blog/angliiskiy-po-skaipu/obuchenie-angliiskjmu-po-skype/prepodavatel'_angliskogo_po_skayp_na_chto_obratit'_vnimaie_1.jpg" alt="Преподаватель английского языка" width="300" height="200">
+                    <img class="teachers__image" src="https://avatars.mds.yandex.net/i?id=73643c2b88cf77db8c6d77a73218b7f8_l-9156576-images-thumbs&n=13" alt="Преподаватель английского языка" width="300" height="200">
                     <h3 class="teachers__name">Преподаватель английского языка: Петров Петр Петрович</h3>
                     <p class="teachers__desc">Опыт работы: 6 лет</p>
                 </li>
+                <li class="teachers__card">
+                    <img class="teachers__image" src="https://avatars.mds.yandex.net/i?id=39d5dc0f2e66a74c773a8381a6a354e1_l-3301613-images-thumbs&n=13" alt="Преподаватель истории" width="300" height="200">
+                    <h3 class="teachers__name">Преподаватель истории: Васильев Василий Васильевич</h3>
+                    <p class="teachers__desc">Опыт работы: 12 лет</p>
+                </li>
+                <li class="teachers__card">
+                    <img class="teachers__image" src="https://as2.ftcdn.net/v2/jpg/00/26/85/25/1000_F_26852549_FHtoWI5Ir4ASQEJrwk0TSakqctVfAO4F.jpg" alt="Преподаватель математики" width="300" height="200">
+                    <h3 class="teachers__name">Преподаватель математики: Сапогов Геннадий Геннадьевич</h3>
+                    <p class="teachers__desc">Опыт работы: 9 лет</p>
+                </li>
             </ul>
         </section>
-
         <section class="main__section">
-            <button class="section__button">Написать отзыв</button>
-            <button class="section__button">Наши контакты</button>
+            <div class="button-container">
+                <button class="btn feedback-btn">Написать отзыв</button>
+                <button class="btn contact-btn">Наши контакты</button>
+            </div>
         </section>
      </main>
      <footer class="footer container">  
      </footer>
+<script src="scripts/script.js"></script>
 </body>
 </html>
