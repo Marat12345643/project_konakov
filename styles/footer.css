@@ -103,3 +103,23 @@
         background-color: #004d40; /* Более темный цвет при наведении */
         transition: background-color 0.3s; /* Плавный переход цвета */
     }
+    #interactive-button {
+        background-color: rgb(210, 210, 210);
+        color: rgb(0, 0, 0);
+        border: none;
+        border-radius: 22px;
+        padding: 10px 20px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    #interactive-button:hover {
+        background-color: rgb(62, 120, 167);
+      }
+      
+    #interactive-button:active {
+        background-color: #ffffff;
+      }
+      
+    #interactive-button:focus {
+        outline: 2px solid #ffffff;
+      }
