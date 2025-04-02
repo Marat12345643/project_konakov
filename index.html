@@ -9,6 +9,7 @@
 </head>
 
 <body>
+    
 <header class="header container">
     <div class="header__logo-wrap">
     <img class="header__logo" src="https://assets.turbologo.ru/blog/ru/2020/01/18163122/logo-school.png" alt="Лого" width="200" height="111">
@@ -33,63 +34,83 @@
                 <a class="menu__link" href="courses.html">Контакты</a>
             </li>
             <li class="menu__item">
-                <a class="menu__link" href="courses.html">Вход</a>
+                <button id="loginButton">Вход</button>
             </li>
         </ul>
     </nav>
 </header>
+
 <main class="main container">
     <section class="welcome">
         <div class="welcome__wrap-left">
         <h2 class="welcome__title">Онлайн курсы для подготовки к ЕГЭ</h2>
         <p class="welcome__title"> C гарантией получения 75 баллов по предмету</p>
         <P class="welcome__title">Пробное занятие бесплатно</P>
-        <button class="interactive-button" type="button">Записаться</button>
+        <button id="openFormButton" type="button">Записаться</button>
         </div>
         <div class="welcome__wrap-right">
         <img class="welcome__image" src="https://img.freepik.com/free-photo/thinking-student-home_144627-26368.jpg?size=626&ext=jpg" alt="Студент" width="550" height="333">
         </div>
     </section>    
 </main>
+
 <footer class="footer container">
     <div class="footer__wrap-left">
         <div id="footer__button">
         <button id="interactive-button" type="button">Посмотри, как проходит подготовка учеников в нашем сервисе</button>
         </div>
-        <video class="footer__video" width="1" height="1" controls>
-            <source src="https://yandex.ru/video/preview/6705781527698299508">
-        </video>
+        <div id="videoContainer">
+            <video id="footer__video" width="1" height="1" controls>
+                <source src="https://www.youtube.com/watch?v=bahonVWOoPk">
+            </video>
+        </div>
         <p class="footer__title">Сайт сделан Конаковым Маратом группа: CT-24</p>
     </div>
+
+    <button id="chat-button">Чат с поддержкой</button>
+    <div id="chat-window" class="chat-window" style="display: none;">
+        <div class="chat-header">
+            <h2>Поддержка</h2>
+            <button id="close-chat">×</button>
+        </div>
+        <div class="chat-messages" id="chat-messages"></div>
+        <input type="text" id="chat-input" placeholder="Введите ваше сообщение">
+        <button id="send-button">Отправить</button>
+    </div>
 </footer>
-<section class="login">
-    <form class="login-form">
-        <h2>Вход в личный кабинет</h2>
-        <div class="input-group">
-            <label for="phone">Номер телефона</label>
-            <input type="tel" id="phones" placeholder="Введите номер" required>
+
+<div id="loginFormContainer" class="hidden">
+    <form id="loginForm">
+        <h2>Вход в Личный Кабинет</h2>
+        <div class="form-group">
+            <label for="username">Логин:</label>
+            <input type="text" id="username" name="username" required>
         </div>
-        <div class="input-group">
-            <label for="password">Пароль</label>
-            <input type="password" id="password" placeholder="Введите пароль" required>
+        <div class="form-group">
+            <label for="password">Пароль:</label>
+            <input type="password" id="password" name="password" required>
         </div>
-        <button type="submit" class="login-button">Войти</button>
+        <button class="closeButton" type="submit">Войти</button>
+        <button type="button" id="closeButton">Закрыть</button>
     </form>
-</section>
-<section class="record">
-    <form class="signup-form">
-        <h2>Запись на пробное занятие</h2>
-        <div class="input-group">
-            <label for="phone">Номер телефона</label>
-            <input type="tel" id="phone" placeholder="Введите номер телефона" required>
-        </div>
-        <div class="input-group">
-            <label for="email">Электронная почта</label>
-            <input type="email" id="email" placeholder="Введите email" required>
-        </div>
+</div>
+
+<div id="registrationForm" class="form-container">
+    <h2>Записаться на пробное занятие</h2>
+    <form id="form">
+    <div class="form-groups">    
+        <label for="phone">Номер телефона:</label>
+        <input type="tel" id="phone" name="phone" required placeholder="+7 (___) ___-__-__">
+    </div>
+    <div class="form-groups">   
+        <label for="email">Электронная почта:</label>
+        <input type="email" id="email" name="email" required placeholder="example@mail.com">
+    </div>     
         <button type="submit" class="signup-button">Записаться</button>
     </form>
-</section>
+    <span id="closeButton" class="close">Закрыть</span>
+</div>
+
 <script src="scripts/script.js"></script>
 </body>
 </html>

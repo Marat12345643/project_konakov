@@ -291,3 +291,30 @@ text-align: center;
   background-color: #0b7dda;
   transform: translateY(-2px);
 }
+
+
+
+.intensive__description {
+  margin-top: 15px;
+  color: black;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 300;
+
+  position: absolute;
+  width: 250px;
+  background-color: burlywood;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+}
+
+.heart {
+  cursor: pointer;
+  color: gray; /* Изначально серое */
+  font-size: 24px; /* Увеличиваем размер для удобства */
+}
+
+.heart.red {
+  color: red; /* Красный цвет */
+}

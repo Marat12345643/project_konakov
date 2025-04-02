@@ -22,6 +22,18 @@
   text-decoration: none;
 }
 
+#loginButton {
+  display: block;
+  padding: 14px;
+  margin: 15px;
+  background-color: rgb(62, 120, 167);
+  color: rgb(10, 10, 10);
+  text-decoration: none;
+  border-radius: 60px;
+  transition: background-color 0.3s;
+  border: none;
+}
+
 .header__logo-wrap {
   display: flex;
   align-items: center;
@@ -59,4 +71,8 @@
 .menu__link {
   border-radius: 60px;
   transition: background-color 0.3s;
+}
+
+.header--scroll {
+  background-color: #ffffff;
 }

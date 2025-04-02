@@ -5,10 +5,12 @@
        .courses {
         flex-wrap: wrap;
         justify-content: space-evenly;
+        gap: 20px;
        }
        .teachers {
         flex-wrap: wrap;
         justify-content: space-evenly;
+        gap: 20px;
        }
        .header__menu {
         flex-wrap: wrap;

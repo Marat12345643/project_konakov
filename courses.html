@@ -107,7 +107,18 @@
             </div>
         </section>
      </main>
+     
      <footer class="footer container">  
+        <button id="chat-button">Чат с поддержкой</button>
+        <div id="chat-window" class="chat-window" style="display: none;">
+            <div class="chat-header">
+                <h2>Поддержка</h2>
+                <button id="close-chat">×</button>
+            </div>
+            <div class="chat-messages" id="chat-messages"></div>
+            <input type="text" id="chat-input" placeholder="Введите ваше сообщение">
+            <button id="send-button">Отправить</button>
+        </div>
      </footer>
 <script src="scripts/script.js"></script>
 </body>
