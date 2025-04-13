@@ -127,7 +127,7 @@ document.getElementById('form').addEventListener('submit', function(event) {
     const phone = document.getElementById('phone').value;
     const email = document.getElementById('email').value;
 
-    alert(`Вы успешно записались на занятие!\nТелефон: ${phone}\nЭлектронная почта: ${email}`);
+    alert(`Вы успешно записались на занятие!\n Телефон: ${phone}\n Электронная почта: ${email}`);
     document.getElementById('registrationForm').style.display = 'none'; // Закрываем форму после успеха
 });
 
@@ -138,5 +138,132 @@ window.onclick = function(event) {
         modal.style.display = "none";
     }
 };
+
+
+
+// 4 задание
+const cardsContainer = document.querySelector('.cards');
+
+if (cardsContainer) {
+
+    const dataTitleCards = ['Анна', 'Иван', 'Василий', 'Геннадий'];
+
+    const titleCards = cardsContainer.querySelectorAll('.teachers__name');
+
+     console.log(titleCards); // проверка в консоли
+
+    titleCards.forEach((item, index) => {
+        item.textContent = dataTitleCards[index];
+    });
+
+}
+
+
+// 5 задание
+/*const cardsContainer = document.querySelector('#cards');
+    if (cardsContainer) {
+        const cardList = cardsContainer.querySelector('.teachers');
+
+        Моковые данные 
+        const cardsData = {
+            teachers1: {
+                image: 'https://jobers.ru/wp-content/uploads/2023/11/idei-dlya-fotosessii-760x427_c.jpeg',
+                imageAlt: 'Преподаватель русского языка',
+                imageWidth: 300,
+                imageHeight: 200,
+                name: 'Преподаватель 1',
+                desc: 'Опыт работы: 3 года'
+            },
+            teachers2: {
+                image: 'https://avatars.mds.yandex.net/i?id=73643c2b88cf77db8c6d77a73218b7f8_l-9156576-images-thumbs&n=13',
+                imageAlt: 'Преподаватель английского языка',
+                imageWidth: 300,
+                imageHeight: 200,
+                name: 'Преподаватель 2',
+                desc: 'Опыт работы: 6 лет'
+            },
+            teachers3: {
+                image: 'https://avatars.mds.yandex.net/i?id=39d5dc0f2e66a74c773a8381a6a354e1_l-3301613-images-thumbs&n=13',
+                imageAlt: 'Преподаватель истории',
+                imageWidth: 300,
+                imageHeight: 200,
+                name: 'Преподаватель 3',
+                desc: 'Опыт работы: 12 лет'
+            },
+            teachers4: {
+                image: 'https://as2.ftcdn.net/v2/jpg/00/26/85/25/1000_F_26852549_FHtoWI5Ir4ASQEJrwk0TSakqctVfAO4F.jpg',
+                imageAlt: 'Преподаватель математики',
+                imageWidth: 300,
+                imageHeight: 200,
+                name: 'Преподаватель 4',
+                desc: 'Опыт работы: 9 лет'
+            }
+        }
+
+        // Функция для создания карточки
+        const createCard = (image, imageAlt, imageWidth, imageHeight, name, desc) => {
+            const card = `
+                <li class="teachers__card">
+                    <img class="teachers__image" src="${image}" alt="${imageAlt}" width="${imageWidth}" height="${imageHeight}">
+                    <h3 class="teachers__name">${name}</h3>
+                    <p class="teachers__desc">${desc}</p>
+                </li>
+            `; 
+                return card;
+        }
+
+        for (const cardKey in cardsData) {
+            const card = cardsData[cardKey];
+            const cardElement = createCard(card.image, card.imageAlt, card.imageWidth, card.imageHeight, card.name, card.desc);
+            cardList.insertAdjacentHTML('beforeend', cardElement); // Второй вариант
+        }
+    }*/
+
+const cardsPrice = document.querySelector('.price');
+if (cardsPrice) {
+    const priceList = cardsPrice.querySelector('.price__list');
+
+    const cardsPriceData = {
+        price1: {
+            level: '– PRO –',
+            price: '12 000 ₽',
+            description: 'УМК по робототетхнике и программированию',
+            button: 'Оставить заявку'
+        },
+        price2: {
+            level: '– POBO –',
+            price: '15 000 ₽',
+            description: 'УМК по робототетхнике',
+            button: 'Оставить заявку'
+        },
+        price3: {
+            level: '– PROG –',
+            price: '10 000 ₽',
+            description: 'УМК по программированию',
+            button: 'Оставить заявку'
+        }
+    }
+
+
+    const createCard = (level, price, description, button) => {
+        const card = `
+            <li class="price__item">
+                <p class="price__level">${level}</p>
+                <p class="price__price">${price}</p>
+                <p class="price__description">${description}</p>
+                <button class="price__button button">${button}</button>
+            </li>
+    `;
+        return card;
+    }
+
+    for (const cardKey in cardsPriceData) {
+        const card = cardsPriceData[cardKey];
+        const cardElement = createCard(card.level, card.price, card.description, card.button);
+        priceList.insertAdjacentHTML('beforeend', cardElement);
+    }
+}
+
+
 
 

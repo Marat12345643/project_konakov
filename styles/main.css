@@ -318,3 +318,47 @@ text-align: center;
 .heart.red {
   color: red; /* Красный цвет */
 }
+
+
+
+.price__list {
+  margin-top: 60px; /*отступ сверху*/
+  display: flex; /*Используем flexbox для выравнивания в строку*/
+  column-gap: 40px; /*промежуток между карточками*/
+}
+
+.price__item {
+  padding: 40px 0; /*Внутренние отступы: 40px сверху и снизу, 0px слева и справа */
+  display: flex; /*Используем flexbox для выравнивания в столбец*/
+  flex-direction: column;/* выстраиваем в колонку*/
+  justify-content: space-between; /* распределяем элементы по ширине*/ 
+  align-items: center; /* выравнивание по вертикали */
+  border: 1px solid rgba(20, 16, 36, 0.2); /*задаем толщину границы и цвет*/
+  border-radius: 20px;/* скругляем границы*/
+  text-align: center; /*выравнивание текста по центру*/
+  width: 360px; /*ширина карточки*/
+  height: 500px; /*высота карточки*/
+  transition: transform 0.3s ease-out; /*плавное изменение свойства в течение 0.3 секунды*/
+}
+
+.price__level {
+  font-weight: 600; /*толщина шрифта */
+  font-size: 30px; /*размер текста тарифа*/
+}
+
+.price__price {
+  margin-top: 83px; /*отступ сверху*/
+  font-weight: 600; /*толщина шрифта */
+  font-size: 50px; /*размер текста цены*/
+}
+
+.price_list {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  height: 100%;
+  justify-content: space-around;
+  column-gap: 20px;
+}
+
+
