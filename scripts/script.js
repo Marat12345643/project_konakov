@@ -4,10 +4,14 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log('Скрипт отработал корректно')
 });
 
-document.getElementById('footer__button').addEventListener('click', function() {
-    document.getElementById('interactive-button').innerText = "Спасибо за то, что уделили свое внимание!";
-    console.log('Скрипт отработал корректно')
-});
+const footer__button = document.getElementById('footer__button'); //ищем элемент с id="footer__button"
+if (footer__button) { // если нашли
+    //добавляем на него событие обработки клика
+    footer__button.addEventListener('click', function() {
+        document.getElementById('interactive-button').innerText = "Спасибо за то, что уделили свое внимание!";
+        console.log('Скрипт отработал корректно')
+    });
+}//конец
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -113,23 +117,30 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 //Запись на занятие
-document.getElementById('openFormButton').addEventListener('click', function() {
+const openFormButton = document.getElementById('openFormButton'); //ищем элемент с id="openFormButton"
+if (openFormButton) { // если нашли
+    //добавляем на него событие обработки клика
+    openFormButton.addEventListener('click', function() {
     document.getElementById('registrationForm').style.display = 'block';
 });
 
 document.getElementById('closeButton').addEventListener('click', function() {
     document.getElementById('registrationForm').style.display = 'none';
 });
+}
 
 // Обработка отправки формы
-document.getElementById('form').addEventListener('submit', function(event) {
+const form = document.getElementById('form'); //ищем элемент с id="form"
+if (form) { // если нашли
+    //добавляем на него событие обработки клика
+    form.addEventListener('submit', function(event) {
     event.preventDefault(); // Предотвращаем стандартное поведение формы
     const phone = document.getElementById('phone').value;
     const email = document.getElementById('email').value;
 
     alert(`Вы успешно записались на занятие!\n Телефон: ${phone}\n Электронная почта: ${email}`);
     document.getElementById('registrationForm').style.display = 'none'; // Закрываем форму после успеха
-});
+});}
 
 // Закрытие модального окна при клике вне его
 window.onclick = function(event) {
@@ -146,7 +157,7 @@ const cardsContainer = document.querySelector('.cards');
 
 if (cardsContainer) {
 
-    const dataTitleCards = ['Анна', 'Иван', 'Василий', 'Геннадий'];
+    const dataTitleCards = ['Иванова Анна Ивановна', ' Васильев Иван Прохорович', 'Петров Василий Петрович', 'Алексеев Егор Егорович'];
 
     const titleCards = cardsContainer.querySelectorAll('.teachers__name');
 
@@ -225,21 +236,27 @@ if (cardsPrice) {
 
     const cardsPriceData = {
         price1: {
-            level: '– PRO –',
-            price: '12 000 ₽',
-            description: 'УМК по робототетхнике и программированию',
+            level: 'Русский для высокого уровня',
+            price: '6 520 ₽',
+            description: 'Выбрали: 435',
             button: 'Оставить заявку'
         },
         price2: {
-            level: '– POBO –',
-            price: '15 000 ₽',
-            description: 'УМК по робототетхнике',
+            level: 'Английский для высокого уровня',
+            price: '6 520 ₽',
+            description: 'Выбрали: 177',
             button: 'Оставить заявку'
         },
         price3: {
-            level: '– PROG –',
-            price: '10 000 ₽',
-            description: 'УМК по программированию',
+            level: 'История для высокого уровня',
+            price: '6 520 ₽',
+            description: 'Выбрали: 379',
+            button: 'Оставить заявку'
+        },
+        price4: {
+            level: 'Математика для высокого уровня',
+            price: '6 520 ₽',
+            description: 'Выбрали: 798',
             button: 'Оставить заявку'
         }
     }
