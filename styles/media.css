@@ -32,6 +32,13 @@
             padding: 5px;
             margin-right: 0;
         }
+        #loginButton {
+            padding: auto;
+            white-space: nowrap;
+            padding: 10px;
+            margin-right: 0;
+        }
+
         .price__list {
             flex-wrap: wrap;
             justify-content: space-evenly;

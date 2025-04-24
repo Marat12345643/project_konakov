@@ -153,13 +153,13 @@ window.onclick = function(event) {
 
 
 // 4 задание
-const cardsContainer = document.querySelector('.cards');
+const cardContainer = document.querySelector('.cards');
 
-if (cardsContainer) {
+if (cardContainer) {
 
     const dataTitleCards = ['Иванова Анна Ивановна', ' Васильев Иван Прохорович', 'Петров Василий Петрович', 'Алексеев Егор Егорович'];
 
-    const titleCards = cardsContainer.querySelectorAll('.teachers__name');
+    const titleCards = cardContainer.querySelectorAll('.teachers__name');
 
      console.log(titleCards); // проверка в консоли
 
@@ -170,66 +170,8 @@ if (cardsContainer) {
 }
 
 
+/*
 // 5 задание
-/*const cardsContainer = document.querySelector('#cards');
-    if (cardsContainer) {
-        const cardList = cardsContainer.querySelector('.teachers');
-
-        Моковые данные 
-        const cardsData = {
-            teachers1: {
-                image: 'https://jobers.ru/wp-content/uploads/2023/11/idei-dlya-fotosessii-760x427_c.jpeg',
-                imageAlt: 'Преподаватель русского языка',
-                imageWidth: 300,
-                imageHeight: 200,
-                name: 'Преподаватель 1',
-                desc: 'Опыт работы: 3 года'
-            },
-            teachers2: {
-                image: 'https://avatars.mds.yandex.net/i?id=73643c2b88cf77db8c6d77a73218b7f8_l-9156576-images-thumbs&n=13',
-                imageAlt: 'Преподаватель английского языка',
-                imageWidth: 300,
-                imageHeight: 200,
-                name: 'Преподаватель 2',
-                desc: 'Опыт работы: 6 лет'
-            },
-            teachers3: {
-                image: 'https://avatars.mds.yandex.net/i?id=39d5dc0f2e66a74c773a8381a6a354e1_l-3301613-images-thumbs&n=13',
-                imageAlt: 'Преподаватель истории',
-                imageWidth: 300,
-                imageHeight: 200,
-                name: 'Преподаватель 3',
-                desc: 'Опыт работы: 12 лет'
-            },
-            teachers4: {
-                image: 'https://as2.ftcdn.net/v2/jpg/00/26/85/25/1000_F_26852549_FHtoWI5Ir4ASQEJrwk0TSakqctVfAO4F.jpg',
-                imageAlt: 'Преподаватель математики',
-                imageWidth: 300,
-                imageHeight: 200,
-                name: 'Преподаватель 4',
-                desc: 'Опыт работы: 9 лет'
-            }
-        }
-
-        // Функция для создания карточки
-        const createCard = (image, imageAlt, imageWidth, imageHeight, name, desc) => {
-            const card = `
-                <li class="teachers__card">
-                    <img class="teachers__image" src="${image}" alt="${imageAlt}" width="${imageWidth}" height="${imageHeight}">
-                    <h3 class="teachers__name">${name}</h3>
-                    <p class="teachers__desc">${desc}</p>
-                </li>
-            `; 
-                return card;
-        }
-
-        for (const cardKey in cardsData) {
-            const card = cardsData[cardKey];
-            const cardElement = createCard(card.image, card.imageAlt, card.imageWidth, card.imageHeight, card.name, card.desc);
-            cardList.insertAdjacentHTML('beforeend', cardElement); // Второй вариант
-        }
-    }*/
-
 const cardsPrice = document.querySelector('.price');
 if (cardsPrice) {
     const priceList = cardsPrice.querySelector('.price__list');
@@ -279,8 +221,63 @@ if (cardsPrice) {
         const cardElement = createCard(card.level, card.price, card.description, card.button);
         priceList.insertAdjacentHTML('beforeend', cardElement);
     }
+}*/
+
+
+
+/* Лекция 6 */
+const cardsPrice = document.querySelector('.price');
+if (cardsPrice) {
+    const priceList = cardsPrice.querySelector('.price__list');
+
+    // Пример URL для получения данных с сервера
+    const apiUrl = 'data.json';
+
+    // Функция для создания карточки
+    const createCard = (level, price, description, button) => {
+        const card = `
+            <li class="price__item">
+                <p class="price__level">${level}</p>
+                <p class="price__price">${price}</p>
+                <p class="price__description">${description}</p>
+                <button class="price__button button">${button}</button>
+            </li>
+    `;
+        return card;
+    }
+
+    // Загрузка данных с сервера
+    fetch(apiUrl)
+        .then(response => response.json())
+        .then(data => {
+            console.log(data); // Данные
+            console.log(typeof (data)); // Тип полученных данных
+
+            // for (const item in data) {
+            //     const card = data[item];
+
+            //     const cardElement = createCard(card.level, card.price, card.description, card.button);
+            //     priceList.insertAdjacentHTML('beforeend', cardElement);
+            // }
+
+            data.forEach(item => {
+                const cardElement = createCard(card.level, card.price, card.description, card.button);
+                priceList.insertAdjacentHTML('beforeend', cardElement);
+            });
+        })
+        .catch(error => {
+            console.error('Ошибка при загрузке данных:', error);
+        });
 }
 
 
+//Таймер
+const reloaderUnterval = 1500000000; 
+function  startReloaderTimer() {
+    setTimeout(() => {
+        location.reload();
+    },  reloaderUnterval);
+}
+window.onload = startReloaderTimer;
 
 
