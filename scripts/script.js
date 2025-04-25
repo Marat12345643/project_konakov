@@ -261,7 +261,7 @@ if (cardsPrice) {
             // }
 
             data.forEach(item => {
-                const cardElement = createCard(card.level, card.price, card.description, card.button);
+                const cardElement = createCard(item.level, item.price, item.description, item.button);
                 priceList.insertAdjacentHTML('beforeend', cardElement);
             });
         })
@@ -270,14 +270,22 @@ if (cardsPrice) {
         });
 }
 
+//  Перезагрузчик
+const preloader = document.querySelector(".preloader");
+    const content = document.querySelector(".content");
+    if (preloader && content) {
+        setTimeout(() => {
+            // Скрываем прелоадер
+            preloader.style.opacity = "0";
+            preloader.style.visibility = "hidden";
 
-//Таймер
-const reloaderUnterval = 1500000000; 
-function  startReloaderTimer() {
-    setTimeout(() => {
-        location.reload();
-    },  reloaderUnterval);
-}
-window.onload = startReloaderTimer;
+            // Показываем контент
+            content.style.display = "block";
+
+            // Удаляем элемент из DOM
+            preloader.remove();
+        }, 3000); // Задержка 3 секунды
+    }
+
 
 
