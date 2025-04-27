@@ -289,3 +289,17 @@ const preloader = document.querySelector(".preloader");
 
 
 
+    //slider
+    const swiper = new Swiper('.sample-slider', {
+        loop: true,
+        autoplay: {         //added
+            delay: 2000,    //added
+        },                  //added
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+            el: '.swiper-pagination',
+        },
+    })
